@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inlämningsuppgift 2</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</head>
+<body>
+    <div id="wrapper">
+
+
+        <!--Anledningen till att jag har en div som en wrap till min header och en section är för att "skogsbilden"
+            ska finnas för båda delarna. Vet inte om det är "rärr semantiskt att göra så här"-->
+        <div class="forest-section" id="home">
+
+            <header class="nav-bar">        
+                <input type="checkbox" class="menu-btn" id="menu-btn">
+                <label for="menu-btn" class="menu-icon">
+                    <span class="navicon"></span>
+                </label>
+                <nav>
+                    <ul>
+                        <li><a href="#home" class="nav-bar-links">Hem</a></li>
+                        <li><a href="#info" class="nav-bar-links">Om</a></li>
+                        <li><a href="#contact" class="nav-bar-links">Kontakt</a></li>
+                    </ul>
+                </nav>    
+            </header>
+
+            <section class="welcome-to-nature">
+                <h2>Welcome to nature</h2>
+                <p>A journey through time and sheep</p>
+                <p>To see how ... cotton ... is mage, made I mean...</p>
+                <a href="#info" class="smooth-white-arrow"><i class="fas fa-arrow-circle-down"></i></a>
+            </section>
+
+        </div>
+
+
+        <main class="info-section" id="info">
+
+            <h1>Träffa Laget</h1>
+
+            <section class="info-section-row-1">
+                <div class="rakib">
+                    <h4>Rakib</h4>
+                    <img src="./css/pictures/profiles/Rakib_Square.png" alt="Bild på Rakib. Arbetar på medieinstitutet"/>
+                    <div class="team-information">
+                        <p><i class="fas fa-quote-right fa-2x"></i> Rakib är vår vassaste node-utvecklare och håller ständigt ett öga på nya tekniker</p>
+                    </div>
+                </div>
+                <div class="alexandra">
+                    <h4>Alexandra</h4>
+                    <img src="./css/pictures/profiles/Alexandra_Square.png" alt="Bild på Alexandra. Arbetar på medieinstitutet"/>
+                    <div class="team-information">
+                        <p><i class="fas fa-quote-right fa-2x"></i> Alexandra håller reda på alla överallt och ser till att det flyter</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-section-row-2">
+                <div class="lasse">
+                    <h4>Lasse</h4>
+                    <img src="./css/pictures/profiles/NoPerson_Square.png" alt="Bild som inte visar någon. Ska representera Lasse. Arbetar på medieinstitutet"/>
+                    <div class="team-information">
+                        <p><i class="fas fa-quote-right fa-2x"></i> Gör övriga saker... mestadels ...</p>
+                    </div>
+                </div>
+                <div class="sebastian">
+                    <h4>Sebastian</h4>
+                    <img src="./css/pictures/profiles/Sebastian_Square.png" alt="Bild på Sebastian. Arbetar på medieinstitutet"/>
+                    <div class="team-information">
+                        <p><i class="fas fa-quote-right fa-2x"></i> En av våra utbiladare som har stor erfarenhet av ganska många saker</p>
+                    </div>
+                </div>
+            </section>
+
+            <a href="#contact" class="smooth-black-arrow"><i class="fas fa-arrow-circle-down"></i></a>
+
+        </main>
+
+        <footer class="footer" id="contact">
+            <div class="footer-adresses">
+                <p>Tegel Consulting AB</p>
+                <p>Agatvägen 18</p>
+                <p>168 60 Bromma</p>
+            </div>
+            <div class="footer-contact">
+                <p>info at tegelconsulting.se</p>
+                <p>070-123 456 78</p>
+            </div>
+            <div class="footer-social-media">
+                <p><i class="fab fa-instagram"></i> Instagram</p>
+                <p><i class="fab fa-twitter"></i> Twitter</p>
+                <p><i class="fab fa-facebook-f"></i> Facebook</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>

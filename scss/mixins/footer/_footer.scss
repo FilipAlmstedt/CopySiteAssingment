@@ -1,0 +1,33 @@
+@import 'scss/variables/_positions';
+@import 'scss/mixins/get-flex-directions';
+@import 'scss/mixins/responsive';
+
+/*Innehåller mixins av basen av dem div:ar som ska bygga upp min footer. */
+
+/*Basen av footer-taggen som ska agera som en wrapper*/
+@mixin get-footer-wrapper-base {
+    @include get-flex-direction-column;
+    justify-content: $flex-position-center;
+    align-items: $flex-position-center;
+    
+    background-color:$bg-color-footer;
+    
+    padding: 40px;
+    margin-top: 10px;
+    
+    @include tablets-and-desktops {
+        @include get-flex-direction-row;
+        justify-content: space-around;
+    }
+}
+
+/*Bas-dimensioner för sektionerna där man kan lägger info om kontaktuppgifterna i footern*/
+@mixin footer-divs {
+    font-size: 1.0em;
+    color: $text-color;
+    
+    @include mobiles-only {
+        width: 170px;
+        height: 170px;
+    }
+}

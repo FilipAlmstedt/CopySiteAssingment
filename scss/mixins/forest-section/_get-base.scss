@@ -1,0 +1,51 @@
+@import 'scss/variables/_positions';
+@import 'scss/mixins/get-flex-directions';
+@import 'scss/variables/_colors';
+
+/*Basstyling för alla saker i forest-section div:en*/
+
+@mixin get-forest-section-base {
+    background-image: url('./pictures/negative-space-black-forest-dawn.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    height: 740px;
+    
+    @include tablets-and-desktops {
+        background-position: center;
+    }
+
+    color: $text-color;
+    @include get-flex-direction-column;
+}
+
+@mixin get-welcome-to-nature-base {
+    @include get-flex-direction-column;
+    justify-content: $flex-position-center;
+    align-items: $flex-position-center;
+    
+    text-align: center; 
+    
+    padding-top: 110px;
+    margin: 50px;
+    
+    p {
+        padding-top: 25px;
+    }
+}
+
+@mixin get-menu-icon-base {
+    padding: 20px;
+    cursor: pointer;
+    
+    @include get-flex-direction-row;
+    justify-content: flex-end;
+    background-color: $bg-color-navbar;
+}
+
+@mixin get-navicon-base {
+    width: 30px;
+    height: 4px;
+    
+    background: $text-color;
+}

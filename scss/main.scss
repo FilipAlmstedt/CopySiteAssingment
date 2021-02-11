@@ -1,0 +1,85 @@
+@import './variables';
+@import './mixins'; 
+
+
+@include get-base-rules;
+
+#wrapper {
+
+    @include get-flex-direction-column;
+
+    /*Delen som innehar skogsbakgrundsbilden*/
+    .forest-section {
+        
+        @include get-forest-section-base;
+
+        .nav-bar {  
+            @include desktop-navbar;
+            @include navbar-links;
+
+            .menu-icon {
+                @include get-menu-icon-base;
+                @include navicon;
+            }
+            
+            @include navbar-ul;
+            @include animation-for-navicon;
+            @include desktop-navbar;
+        }
+        
+        /*Delen med texten welcome to nature*/
+        .welcome-to-nature {
+            @include get-welcome-to-nature-base;
+            @include white-arrow;
+        }
+    }
+
+    /*Del med informationen om medarbetarna. Min main*/
+    .info-section {
+        @include get-main-base;
+
+        /*Innehåller info om rakib och alexandra*/
+        .info-section-row-1 {   
+            @include get-flex-direction-column;
+
+            @include tablets-and-desktops {
+                @include get-flex-direction-row;
+            }   
+            .rakib {
+                @include employee-profile;
+            }
+            .alexandra {
+                @include employee-profile;
+            }
+        }
+        /*Innehåller info om lasse och sebastian*/
+        .info-section-row-2 {     
+            @include get-flex-direction-column;
+
+            @include tablets-and-desktops {
+                @include get-flex-direction-row;
+            }   
+            .lasse {
+                @include employee-profile;
+            }
+            .sebastian {
+                @include employee-profile;
+            }
+        }
+        @include black-arrow;
+    }
+
+    /*Footer*/
+    .footer {
+        @include get-footer-wrapper-base;
+        .footer-adresses {
+            @include footer-divs;
+        }
+        .footer-contact {
+            @include footer-divs;
+        }
+        .footer-social-media {
+            @include footer-divs;
+        }
+    }
+}

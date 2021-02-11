@@ -1,0 +1,18 @@
+/*Mixins som kan används till allt möjligt*/
+@import './mixins/responsive';
+@import './mixins/get-flex-directions';
+@import './mixins/get-body-base';
+
+/*Mina mixins som tillhör min div forest-section*/
+@import './mixins/forest-section/animations-for-navicon';
+@import './mixins/forest-section/get-base';
+@import './mixins/forest-section/navicon';
+@import './mixins/forest-section/navbar';
+
+/*Mina mixins som tillhör min main*/
+
+@import './mixins/main/info-section';
+@import './mixins/main/arrow-icons';
+
+/*Mina mixins som tillhör min footer*/
+@import './mixins/footer/footer';

@@ -1,0 +1,16 @@
+/*Innehåller styling av dem två olika pil-symbolerna inom main-taggen*/
+
+@mixin white-arrow {
+    .smooth-white-arrow {
+        margin-top: 110px; //Lösning som gjorde att jag kunde lägga min pil längre ner. Annars funkade det inte.
+        color: $text-color;
+    }
+}
+
+@mixin black-arrow {
+    .smooth-black-arrow {
+        color: $bg-color-footer;
+        margin-top: 5px;
+        font-size: 1.2em;
+    }
+}

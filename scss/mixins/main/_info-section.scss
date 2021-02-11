@@ -1,0 +1,55 @@
+@import 'scss/variables/_colors';
+@import 'scss/variables/_positions';
+@import 'scss/variables/_measurements';
+@import 'scss/mixins/get-flex-directions';
+@import 'scss/mixins/responsive';
+
+/*Denna del innehåller delar av mina div som finns i min main-tagg*/
+
+@mixin get-main-base {
+    font-size: 0.8em;
+
+    @include get-flex-direction-column;
+    justify-content: $flex-position-center;
+    align-items: $flex-position-center;
+
+    text-align: center;
+    margin-top: 50px;
+    img {
+        @include employee-pics;
+    }
+}   
+
+/*Div som innehåller både bilden och boxen med info*/
+@mixin employee-profile {
+    margin: 40px;
+    .team-information {
+        @include employee-info-box;
+    }
+}
+
+@mixin employee-pics {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 0.75rem $employee-box-shadow-color);
+    margin-bottom: 15px;
+
+    @include tablets-and-desktops {
+        /*Förstorar mina bilder lite när skärmen ska bli större*/
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@mixin employee-info-box {
+    background-color: $bg-color-employee-box;
+    width: 250px;
+    padding: 15px;
+    border-radius: $br-for-nav-and-box-info;
+    margin: 10px;
+
+    @include tablets-and-desktops {
+        width: 370px;
+    }
+}

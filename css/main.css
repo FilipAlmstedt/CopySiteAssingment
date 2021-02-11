@@ -1,0 +1,299 @@
+@charset "UTF-8";
+/*För hamburgar-ikonens och info-boxens runda kanter*/
+/*Mixins som kan används till allt möjligt*/
+/*Mixins för responsivteten på sidan*/
+/*Sätter grundvärderna för mina divs när jag ska använda flex*/
+/*Regler som ska gälla på hela sidan*/
+/*Mina mixins som tillhör min div forest-section*/
+/*innehåller styling som animerar hamburgar-ikonen när man klickar på den samt att nav:ens ul dyker upp*/
+/*Sätter grundvärderna för mina divs när jag ska använda flex*/
+/*Basstyling för alla saker i forest-section div:en*/
+/*Sätter grundvärderna för mina divs när jag ska använda flex*/
+/*För hamburgar-ikonens och info-boxens runda kanter*/
+/*Sätter grundvärderna för mina divs när jag ska använda flex*/
+/*Basstyling för alla saker i forest-section div:en*/
+/*Styling för hamburgar-ikonen*/
+/*Sätter grundvärderna för mina divs när jag ska använda flex*/
+/*Styling för navbar*/
+/*Mina mixins som tillhör min main*/
+/*För hamburgar-ikonens och info-boxens runda kanter*/
+/*Sätter grundvärderna för mina divs när jag ska använda flex*/
+/*Mixins för responsivteten på sidan*/
+/*Denna del innehåller delar av mina div som finns i min main-tagg*/
+/*Div som innehåller både bilden och boxen med info*/
+/*Innehåller styling av dem två olika pil-symbolerna inom main-taggen*/
+/*Mina mixins som tillhör min footer*/
+/*Sätter grundvärderna för mina divs när jag ska använda flex*/
+/*Mixins för responsivteten på sidan*/
+/*Innehåller mixins av basen av dem div:ar som ska bygga upp min footer. */
+/*Basen av footer-taggen som ska agera som en wrapper*/
+/*Bas-dimensioner för sektionerna där man kan lägger info om kontaktuppgifterna i footern*/
+html, body {
+  /* Används för att sprida ut så att min wrapper ska sprida ut sig över hela skärmen*/
+  margin: 0px;
+  padding: 0px;
+  /*Ska vara standard. Jag ändrar min font-size med em hela tiden */
+  font-size: 20px;
+  /*Gör att när man trycker på länkar så scrollar det mjuck ner till den delen på sidan*/
+  /*Funkar ej i Safari*/
+  scroll-behavior: smooth; }
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  /*Delen som innehar skogsbakgrundsbilden*/
+  /*Del med informationen om medarbetarna. Min main*/
+  /*Footer*/ }
+  #wrapper .forest-section {
+    background-image: url("./pictures/negative-space-black-forest-dawn.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 740px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /*Delen med texten welcome to nature*/ }
+    @media screen and (min-width: 769px) {
+      #wrapper .forest-section {
+        background-position: center; } }
+    #wrapper .forest-section .nav-bar {
+      /*Modifierningsdel för hur navbaren ska se ut på desktops*/
+      /*Responsiv navbar implementerad med hamburger meny*/
+      /*När man klickar på hamburgar-ikonen, Vad händer med nav:ens ul?*/
+      /*Animationen av hamburger-menyn*/
+      /*Modifierningsdel för hur navbaren ska se ut på desktops*/ }
+      @media screen and (min-width: 769px) {
+        #wrapper .forest-section .nav-bar {
+          background-color: rgba(240, 240, 240, 0.1); }
+          #wrapper .forest-section .nav-bar .menu-icon {
+            display: none; }
+          #wrapper .forest-section .nav-bar nav {
+            padding: 5px;
+            margin: 25px; }
+            #wrapper .forest-section .nav-bar nav ul {
+              height: 25px;
+              text-align: right;
+              opacity: 1;
+              visibility: visible; }
+              #wrapper .forest-section .nav-bar nav ul li {
+                display: inline-flex;
+                padding-right: 20px; } }
+      #wrapper .forest-section .nav-bar .nav-bar-links {
+        text-decoration: none;
+        color: white;
+        text-align: center; }
+      #wrapper .forest-section .nav-bar .nav-bar-links:link {
+        text-decoration: none;
+        color: white; }
+      #wrapper .forest-section .nav-bar .nav-bar-links:hover {
+        text-decoration: underline;
+        color: white; }
+      #wrapper .forest-section .nav-bar .menu-icon {
+        padding: 20px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: rgba(240, 240, 240, 0.1);
+        /*Hamburgar-ikonen, Design för "strecket i mitten"*/
+        /*Hamburgar-ikonen, Design för "strecken" som är ovanför och nedanför*/ }
+        #wrapper .forest-section .nav-bar .menu-icon .navicon {
+          width: 30px;
+          height: 4px;
+          background: white;
+          border-radius: 5px;
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          transition: background .2s ease-out; }
+        #wrapper .forest-section .nav-bar .menu-icon .navicon:before,
+        #wrapper .forest-section .nav-bar .menu-icon .navicon:after {
+          width: 30px;
+          height: 4px;
+          background: white;
+          content: '';
+          display: flex;
+          flex-direction: column;
+          top: 7px;
+          position: absolute;
+          transition: all .2s ease-out; }
+        #wrapper .forest-section .nav-bar .menu-icon .navicon:before {
+          top: 7px;
+          border-radius: 5px; }
+        #wrapper .forest-section .nav-bar .menu-icon .navicon:after {
+          top: -7px;
+          border-radius: 5px; }
+      #wrapper .forest-section .nav-bar nav ul {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+        margin: 0px;
+        padding: 0px;
+        height: 75px; }
+        #wrapper .forest-section .nav-bar nav ul li {
+          display: flex;
+          flex-direction: column; }
+      #wrapper .forest-section .nav-bar #menu-btn {
+        display: none; }
+      #wrapper .forest-section .nav-bar #menu-btn:checked ~ nav ul {
+        opacity: 1;
+        background-color: rgba(240, 240, 240, 0.1);
+        visibility: visible;
+        transition: all 0.5s; }
+      #wrapper .forest-section .nav-bar .menu-btn {
+        display: none; }
+      #wrapper .forest-section .nav-bar .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent; }
+      #wrapper .forest-section .nav-bar .menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(137deg); }
+      #wrapper .forest-section .nav-bar .menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(-137deg); }
+      #wrapper .forest-section .nav-bar .menu-btn:checked ~ .menu-icon .navicon:before,
+      #wrapper .forest-section .nav-bar .menu-btn:checked ~ .menu-icon .navicon:after {
+        top: 0; }
+      @media screen and (min-width: 769px) {
+        #wrapper .forest-section .nav-bar {
+          background-color: rgba(240, 240, 240, 0.1); }
+          #wrapper .forest-section .nav-bar .menu-icon {
+            display: none; }
+          #wrapper .forest-section .nav-bar nav {
+            padding: 5px;
+            margin: 25px; }
+            #wrapper .forest-section .nav-bar nav ul {
+              height: 25px;
+              text-align: right;
+              opacity: 1;
+              visibility: visible; }
+              #wrapper .forest-section .nav-bar nav ul li {
+                display: inline-flex;
+                padding-right: 20px; } }
+    #wrapper .forest-section .welcome-to-nature {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 110px;
+      margin: 50px; }
+      #wrapper .forest-section .welcome-to-nature p {
+        padding-top: 25px; }
+      #wrapper .forest-section .welcome-to-nature .smooth-white-arrow {
+        margin-top: 110px;
+        color: white; }
+  #wrapper .info-section {
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    /*Innehåller info om rakib och alexandra*/
+    /*Innehåller info om lasse och sebastian*/ }
+    #wrapper .info-section img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      filter: drop-shadow(0 0 0.75rem rgba(50, 50, 50, 0.45));
+      margin-bottom: 15px; }
+      @media screen and (min-width: 769px) {
+        #wrapper .info-section img {
+          /*Förstorar mina bilder lite när skärmen ska bli större*/
+          width: 350px;
+          height: 350px; } }
+    #wrapper .info-section .info-section-row-1 {
+      display: flex;
+      flex-direction: column; }
+      @media screen and (min-width: 769px) {
+        #wrapper .info-section .info-section-row-1 {
+          display: flex;
+          flex-direction: row; } }
+      #wrapper .info-section .info-section-row-1 .rakib {
+        margin: 40px; }
+        #wrapper .info-section .info-section-row-1 .rakib .team-information {
+          background-color: gainsboro;
+          width: 250px;
+          padding: 15px;
+          border-radius: 5px;
+          margin: 10px; }
+          @media screen and (min-width: 769px) {
+            #wrapper .info-section .info-section-row-1 .rakib .team-information {
+              width: 370px; } }
+      #wrapper .info-section .info-section-row-1 .alexandra {
+        margin: 40px; }
+        #wrapper .info-section .info-section-row-1 .alexandra .team-information {
+          background-color: gainsboro;
+          width: 250px;
+          padding: 15px;
+          border-radius: 5px;
+          margin: 10px; }
+          @media screen and (min-width: 769px) {
+            #wrapper .info-section .info-section-row-1 .alexandra .team-information {
+              width: 370px; } }
+    #wrapper .info-section .info-section-row-2 {
+      display: flex;
+      flex-direction: column; }
+      @media screen and (min-width: 769px) {
+        #wrapper .info-section .info-section-row-2 {
+          display: flex;
+          flex-direction: row; } }
+      #wrapper .info-section .info-section-row-2 .lasse {
+        margin: 40px; }
+        #wrapper .info-section .info-section-row-2 .lasse .team-information {
+          background-color: gainsboro;
+          width: 250px;
+          padding: 15px;
+          border-radius: 5px;
+          margin: 10px; }
+          @media screen and (min-width: 769px) {
+            #wrapper .info-section .info-section-row-2 .lasse .team-information {
+              width: 370px; } }
+      #wrapper .info-section .info-section-row-2 .sebastian {
+        margin: 40px; }
+        #wrapper .info-section .info-section-row-2 .sebastian .team-information {
+          background-color: gainsboro;
+          width: 250px;
+          padding: 15px;
+          border-radius: 5px;
+          margin: 10px; }
+          @media screen and (min-width: 769px) {
+            #wrapper .info-section .info-section-row-2 .sebastian .team-information {
+              width: 370px; } }
+    #wrapper .info-section .smooth-black-arrow {
+      color: black;
+      margin-top: 5px;
+      font-size: 1.2em; }
+  #wrapper .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 40px;
+    margin-top: 10px; }
+    @media screen and (min-width: 769px) {
+      #wrapper .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; } }
+    #wrapper .footer .footer-adresses {
+      font-size: 1.0em;
+      color: white; }
+      @media screen and (max-width: 768px) {
+        #wrapper .footer .footer-adresses {
+          width: 170px;
+          height: 170px; } }
+    #wrapper .footer .footer-contact {
+      font-size: 1.0em;
+      color: white; }
+      @media screen and (max-width: 768px) {
+        #wrapper .footer .footer-contact {
+          width: 170px;
+          height: 170px; } }
+    #wrapper .footer .footer-social-media {
+      font-size: 1.0em;
+      color: white; }
+      @media screen and (max-width: 768px) {
+        #wrapper .footer .footer-social-media {
+          width: 170px;
+          height: 170px; } }

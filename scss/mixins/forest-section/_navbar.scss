@@ -1,0 +1,64 @@
+@import 'scss/mixins/get-flex-directions';
+
+/*Styling för navbar*/
+
+@mixin navbar-ul {
+    /*Responsiv navbar implementerad med hamburger meny*/
+    nav {
+        ul{
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s;
+            margin: 0px;
+            padding: 0px;
+            height: 75px;   
+            li {
+                @include get-flex-direction-column;
+            }
+        }
+    }
+}
+
+@mixin desktop-navbar {
+    /*Modifierningsdel för hur navbaren ska se ut på desktops*/
+    @include tablets-and-desktops {
+        background-color: $bg-color-navbar;
+        .menu-icon {
+            display: none;
+        }
+        nav {
+            padding: 5px;
+            margin: 25px;
+            ul {
+                height: 25px;
+                text-align: right;
+                opacity: 1;
+                visibility: visible;
+                li {
+                    display: inline-flex;
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+@mixin navbar-links {
+    .nav-bar-links {
+        text-decoration: none;
+        color: $text-color;
+        
+        text-align: center;        
+    }   
+    .nav-bar-links:link {
+        text-decoration: none;
+        color: $text-color;
+    }
+    .nav-bar-links:hover {
+        text-decoration: underline;
+        color: $text-color;
+    }
+}
+
+

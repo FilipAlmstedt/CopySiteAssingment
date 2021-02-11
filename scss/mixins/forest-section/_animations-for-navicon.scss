@@ -1,0 +1,32 @@
+/*innehåller styling som animerar hamburgar-ikonen när man klickar på den samt att nav:ens ul dyker upp*/
+
+@mixin animation-for-navicon {
+    #menu-btn {
+        display: none;
+    }
+    /*När man klickar på hamburgar-ikonen, Vad händer med nav:ens ul?*/
+    #menu-btn:checked ~ nav ul{
+        opacity: 1;
+        background-color: $bg-color-navbar;
+        visibility: visible;
+        transition: all 0.5s;
+    }
+
+    /*Animationen av hamburger-menyn*/
+    .menu-btn {
+        display: none;
+    }
+    .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+    }
+    .menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(137deg);
+    }
+    .menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(-137deg);
+    }
+    .menu-btn:checked ~ .menu-icon .navicon:before,
+    .menu-btn:checked ~ .menu-icon .navicon:after {
+        top: 0;
+    }
+}

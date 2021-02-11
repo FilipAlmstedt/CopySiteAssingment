@@ -1,0 +1,11 @@
+/*Sätter grundvärderna för mina divs när jag ska använda flex*/
+
+@mixin get-flex-direction-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin get-flex-direction-row {
+    display: flex;
+    flex-direction: row;
+}

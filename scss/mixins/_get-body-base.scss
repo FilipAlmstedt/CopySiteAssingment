@@ -1,0 +1,16 @@
+/*Regler som ska gälla på hela sidan*/
+@mixin get-base-rules {
+    html, body {
+        /* Används för att sprida ut så att min wrapper ska sprida ut sig över hela skärmen*/
+        margin: 0px;
+        padding: 0px;
+        
+        /*Ska vara standard. Jag ändrar min font-size med em hela tiden */
+        font-size: 20px;
+
+        /*Gör att när man trycker på länkar så scrollar det mjuck ner till den delen på sidan*/
+        /*Funkar ej i Safari*/
+        scroll-behavior: smooth;
+    }
+}
+    

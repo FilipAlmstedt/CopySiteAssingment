@@ -1,0 +1,35 @@
+@import 'scss/mixins/get-flex-directions';
+@import 'scss/variables/_measurements';
+@import './get-base';
+
+/*Styling för hamburgar-ikonen*/
+
+@mixin navicon {
+    /*Hamburgar-ikonen, Design för "strecket i mitten"*/
+    .navicon {
+        @include get-navicon-base;
+        border-radius: $br-for-nav-and-box-info;
+        @include get-flex-direction-column;
+        position: relative;
+        transition: background .2s ease-out;
+    }
+
+    /*Hamburgar-ikonen, Design för "strecken" som är ovanför och nedanför*/
+    .navicon:before,
+    .navicon:after {
+        @include get-navicon-base; 
+        content: '';
+        @include get-flex-direction-column;
+        top: 7px;
+        position: absolute;
+        transition: all .2s ease-out;
+    }
+    .navicon:before {
+        top: 7px;
+        border-radius: $br-for-nav-and-box-info;
+    }
+    .navicon:after {
+        top: -7px;
+        border-radius: $br-for-nav-and-box-info;
+    }
+}
