@@ -7,9 +7,7 @@ The result was very good. It became almot,if not identical to the original even 
 
 The site was going to have SASS ass the styling extention tool to CSS. In the scss-files I also use the concept of mixins and variables. 
 
-En gulpfile fanns också för att kompilera och skapa minimerad CSS-fil (main.min.css).
-
-A gulpfile is there as help to help complie the scss-files in case of any change.
+A gulpfile is there as help to help complie the scss-files in case of any change aswell as to minify the css-file.
 
 The site is responsive.
 
