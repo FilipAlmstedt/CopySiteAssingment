@@ -5,7 +5,7 @@ This was an assignment I had where I got a website and my job was to try an recr
 
 The result was very good. It became almot,if not identical to the original even doe the solution codewise might be different.
 
-JThe site was going to have SASS ass the styling extention tool to CSS. In the scss-files I also use the concept of mixins and variables. 
+The site was going to have SASS ass the styling extention tool to CSS. In the scss-files I also use the concept of mixins and variables. 
 
 En gulpfile fanns också för att kompilera och skapa minimerad CSS-fil (main.min.css).
 
@@ -16,7 +16,6 @@ The site is responsive.
 --------------------------------------
 ### Get started!
 --------------------------------------
-För att testa och leka runt på hemsidan så klona repot med `git clone` och gå in i mappen.
 
 To see and test the features of the website, clone repo with command `git clone` and move in the project folder using the `cd` command in the terminal.
 
@@ -25,4 +24,7 @@ Then run the command: `npm install node-sass` så the node-modules folder is add
 Then you're all set!
 
 Have fun!
+
+###### OBS!
+Comments and text is in Swedish!!!
 
