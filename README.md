@@ -1,21 +1,28 @@
-# Uppgift 2 i HTML och CSS
+# Assignment - Copy a webiste
 --------------------------------------
-Detta är den andra inlämningsuppgiften inom kursen HTML och CSS. Uppgiften var att få en hemsida med en satt design och kunna skapa en sida med likadan design. 
 
-Sidan är även responsiv
+This was an assignment I had where I got a website and my job was to try an recreate it styling on the website. I needed to make look almost if not identical to the original.
 
-Resultatet blev väldigt bra. 
+The result was very good. It became almot,if not identical to the original even doe the solution codewise might be different.
 
-Jag använde SASS här där jag har delat in det olika delarna på sidorna med mixins. Variabler som används i nästan alla SASS-filer finns också här.
+JThe site was going to have SASS ass the styling extention tool to CSS. In the scss-files I also use the concept of mixins and variables. 
 
 En gulpfile fanns också för att kompilera och skapa minimerad CSS-fil (main.min.css).
 
+A gulpfile is there as help to help complie the scss-files in case of any change.
+
+The site is responsive.
+
 --------------------------------------
-### För att komma igång
+### Get started!
 --------------------------------------
 För att testa och leka runt på hemsidan så klona repot med `git clone` och gå in i mappen.
 
-Kör sedan kommandot: `npm install node-sass` så du får ned node-modules mappen
+To see and test the features of the website, clone repo with command `git clone` and move in the project folder using the `cd` command in the terminal.
 
-Sen är det bara att köra igång!
+Then run the command: `npm install node-sass` så the node-modules folder is added to the project folder.
+
+Then you're all set!
+
+Have fun!
 
