@@ -1,9 +1,9 @@
 # Assignment - Copy a webiste
 --------------------------------------
 
-This was an assignment I had where I got a website and my job was to try an recreate it styling on the website. I needed to make look almost if not identical to the original.
+This was an assignment I had where I got a website and my job was to try an recreate it styling on the website. I needed to make it look almost identical or completly identical to the original.
 
-The result was very good. It became almot,if not identical to the original even doe the solution codewise might be different.
+The result was very good. It became almost, if not identical to the original even doe the solution codewise might be different.
 
 The site was going to have SASS ass the styling extention tool to CSS. In the scss-files I also use the concept of mixins and variables. 
 
