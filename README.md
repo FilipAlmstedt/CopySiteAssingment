@@ -24,5 +24,5 @@ Then you're all set!
 Have fun!
 
 ###### OBS!
-Comments and text is in Swedish!!!
+Comments and plain text is in Swedish!!!
 
